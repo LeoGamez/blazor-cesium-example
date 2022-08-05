@@ -7,9 +7,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4CA89F45-0B2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{45C0DC43-EFC1-488E-B9FB-01C0657511CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazorium", "blazorium\blazorium.csproj", "{A6C972B2-730B-488D-9536-F519296213CF}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6C972B2-730B-488D-9536-F519296213CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6C972B2-730B-488D-9536-F519296213CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6C972B2-730B-488D-9536-F519296213CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6C972B2-730B-488D-9536-F519296213CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6C972B2-730B-488D-9536-F519296213CF} = {4CA89F45-0B25-4DA7-AFE9-D00455BC19A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB719C36-FBA8-4E53-9646-C0712CEA011D}
