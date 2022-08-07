@@ -1,7 +1,9 @@
 # blazor-cesium-example
 
-- MudBlazor for Blazor
-- RabbitMQ for message queue.
+This is a test project to simulate data coming from a steam and vizualize in a map. It uses the following libraries:
+
+- MudBlazor.
+- RabbitMQ.
 - CesiumJS for map vizualization
 
 #TODO
