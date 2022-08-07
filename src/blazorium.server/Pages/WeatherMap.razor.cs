@@ -39,18 +39,5 @@ namespace blazorium.server.Pages
             }
             await InvokeAsync(StateHasChanged);
         }
-
-        private async Task LoadPointsToMap()
-        {
-            if (weatherPoints != null)
-            {
-                foreach (var p in weatherPoints.ToArray())
-                {
-                    await js.InvokeVoidAsync("addPoint", p);
-                }
-
-                await InvokeAsync(StateHasChanged);
-            }
-        }
     }
 }
