@@ -8,3 +8,4 @@ This is a test project to simulate data coming from a steam and vizualize in a m
 
 #TODO
 - Unit and AAT tests pending
+- Refactoring
