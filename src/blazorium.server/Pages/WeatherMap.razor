@@ -1,0 +1,37 @@
+﻿@page "/weathermap"
+@using MudBlazor
+@using blazorium.Shared.Model
+<PageTitle>Weather Map</PageTitle>
+
+
+
+<br />
+<br />
+<MudText Typo="Typo.h4">Weather Map</MudText>
+
+<MudGrid>
+    <MudItem xs="12" sm="12" md="12">
+        <div id="cesium-map-container">
+        </div>
+    </MudItem>
+    <MudItem xs="12" sm="12" md="12">
+        <MudTable Items="@weatherPoints" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+            <HeaderContent>
+                <MudTh>Id</MudTh>
+                <MudTh>Name</MudTh>
+                <MudTh>Latitude</MudTh>
+                <MudTh>Longitude</MudTh>
+                <MudTh>TemperatureC</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd DataLabel="Id">@context.Id</MudTd>
+                <MudTd DataLabel="Name">@context.Name , @context.Country</MudTd>
+                <MudTd DataLabel="Lat">@context.Latitude</MudTd>
+                <MudTd DataLabel="Lon">@context.Longitude</MudTd>
+                <MudTd DataLabel="Temp">@context.TemperatureC</MudTd>
+            </RowTemplate>
+        </MudTable>
+    </MudItem>
+</MudGrid>
+
+

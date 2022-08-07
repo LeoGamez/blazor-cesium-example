@@ -1,0 +1,34 @@
+﻿@page "/counter"
+@using blazorium.Server.Services
+@using blazorium.Shared.Model
+
+@inject WeatherService weatherService;
+
+<PageTitle></PageTitle>
+
+<div>
+    @foreach(var point in weatherPoints)
+    {
+        <div>@point.TemperatureC</div>
+    }
+</div>
+
+@code {
+    private List<WeatherPoint> weatherPoints=new();
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            weatherService.SetCallBack(LoadPoints);
+
+        }
+        return base.OnAfterRenderAsync(firstRender);
+    }
+
+    public async Task LoadPoints(List<WeatherPoint> points)
+    {
+        weatherPoints = points;
+        await InvokeAsync(StateHasChanged);
+    }
+}

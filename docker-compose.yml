@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  blazorium.server:
+    image: ${DOCKER_REGISTRY-}blazoriumserver
+    build:
+      context: .
+      dockerfile: src/blazorium.server/Dockerfile
+
+  blazorium.producer:
+    image: ${DOCKER_REGISTRY-}blazoriumproducer
+    build:
+      context: .
+      dockerfile: src/blazorium.producer/Dockerfile
+
+volumes:
+  mongo_data:

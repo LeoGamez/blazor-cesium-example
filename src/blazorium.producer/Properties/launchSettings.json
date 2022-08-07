@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "blazorium.producer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
