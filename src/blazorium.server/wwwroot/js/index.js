@@ -11,6 +11,8 @@ function createViewer() {
     viewer = new Cesium.Viewer('cesium-map-container', {
         terrainProvider: Cesium.createWorldTerrain()
     });
+    viewer.scene.globe.depthTestAgainstTerrain = false;
+
 }
 
 function addPoint(weatherPoint) {
@@ -18,17 +20,17 @@ function addPoint(weatherPoint) {
     viewer.entities.add({
         position: Cesium.Cartesian3.fromDegrees(weatherPoint.longitude, weatherPoint.latitude),
         point: {
-            pixelSize: 5,
-            color: Cesium.Color.RED,
+            pixelSize: 8,
+            color: Cesium.Color.BLUE,
             outlineColor: Cesium.Color.WHITE,
             outlineWidth: 2
         },
         label: {
             text: weatherPoint.temperatureC+'° C',
-            font: '14px monospace',
+            font: '12px Verdana',
             showBackground: true,
             horizontalOrigin: Cesium.HorizontalOrigin.LEFT,
-            verticalOrigin: Cesium.VerticalOrigin.TOP,
+            verticalOrigin: Cesium.VerticalOrigin.TOP
         }
     });
 }

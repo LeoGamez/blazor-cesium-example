@@ -26,7 +26,7 @@ namespace blazorium.producer.Services
                 var result = await url.GetStringAsync();
                 var rand = (double)((double)random.Next(0, 100) / (double)100);
                 var weatherJson = JObject.Parse(result);
-                weatherPoint.TemperatureC = Math.Round(((double)weatherJson["current"]["temp"]) - 273.15 + rand, 2);
+                weatherPoint.TemperatureC = Math.Round(((double)weatherJson["current"]["temp"]) + rand, 2);
             }        
 
             return weatherPoints;
