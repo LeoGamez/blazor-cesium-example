@@ -5,7 +5,7 @@ function helloWorld() {
 }
 
 function createViewer() {
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwOTQwMTMxNS01MWQxLTRmM2YtODc1NC1jMTFjMWE4MDBjMDgiLCJpZCI6MTAzODMyLCJpYXQiOjE2NTk3MzI5NjB9.4MigYSwwMilQDSf8_KMwPvyrf3nHY9VrJ1hyWAHw4yc';
+    Cesium.Ion.defaultAccessToken = 'Insert valid token';
 
     // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
     viewer = new Cesium.Viewer('cesium-map-container', {
